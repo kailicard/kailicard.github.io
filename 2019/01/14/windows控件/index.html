@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>windows控件 | kailicard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="this is my first log of windows-op.it can be exist a lot of error and hope viewer can find it! 一、对话框编辑器创建控件1、使用new在堆上创建，系统结束时我们需要使用delete去销毁控件2、对话框编辑器控件，程序结束，自动销毁二、控件类的基类CWnd类和消息映射隐藏在Wndproc()函数，含有win">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows控件">
+<meta property="og:url" content="http://yoursite.com/2019/01/14/windows控件/index.html">
+<meta property="og:site_name" content="kailicard">
+<meta property="og:description" content="this is my first log of windows-op.it can be exist a lot of error and hope viewer can find it! 一、对话框编辑器创建控件1、使用new在堆上创建，系统结束时我们需要使用delete去销毁控件2、对话框编辑器控件，程序结束，自动销毁二、控件类的基类CWnd类和消息映射隐藏在Wndproc()函数，含有win">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-14T04:41:04.615Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="windows控件">
+<meta name="twitter:description" content="this is my first log of windows-op.it can be exist a lot of error and hope viewer can find it! 一、对话框编辑器创建控件1、使用new在堆上创建，系统结束时我们需要使用delete去销毁控件2、对话框编辑器控件，程序结束，自动销毁二、控件类的基类CWnd类和消息映射隐藏在Wndproc()函数，含有win">
+  
+    <link rel="alternate" href="/atom.xml" title="kailicard" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="../../../../css/style.css">
+  <link rel="stylesheet" href="../../../../plugin/bganimation/bg.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://kailicard.github.io/kaikai.githup.io/2.jpg">
+    <h2 class="author">kaili</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>2</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>1</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>2</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-windows控件" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="" class="article-date">
+  <time class="post-time" datetime="2019-01-14T04:40:21.000Z" itemprop="datePublished">
+    <span class="post-month">1月</span><br/>
+    <span class="post-day">14</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      windows控件
+    </h1>
+  
+
+        <div>
+          
+          
+              
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="" class="leancloud_visitors" data-flag-title="windows控件">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+<div class="article-entry" itemprop="articleBody">
+  
+  	
+  	
+  	  
+<div id="toc" class="toc-article">
+  <strong class="toc-title">文章目录</strong>
+  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、对话框编辑器创建控件"><span class="toc-number">1.</span> <span class="toc-text">一、对话框编辑器创建控件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、使用new在堆上创建，系统结束时我们需要使用delete去销毁控件"><span class="toc-number">1.1.</span> <span class="toc-text">1、使用new在堆上创建，系统结束时我们需要使用delete去销毁控件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、对话框编辑器控件，程序结束，自动销毁"><span class="toc-number">1.2.</span> <span class="toc-text">2、对话框编辑器控件，程序结束，自动销毁</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、控件类的基类"><span class="toc-number">2.</span> <span class="toc-text">二、控件类的基类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建CWnd子控件"><span class="toc-number">2.1.</span> <span class="toc-text">创建CWnd子控件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、控件的消息和处理"><span class="toc-number">3.</span> <span class="toc-text">三、控件的消息和处理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、静态控件和编辑控件"><span class="toc-number">4.</span> <span class="toc-text">四、静态控件和编辑控件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、静态控件类static"><span class="toc-number">4.1.</span> <span class="toc-text">1、静态控件类static</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Cedit编辑类控件"><span class="toc-number">4.2.</span> <span class="toc-text">2、Cedit编辑类控件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、单选框控件"><span class="toc-number">4.3.</span> <span class="toc-text">3、单选框控件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、单选框控件的消息和参考上面控件的消息"><span class="toc-number">4.4.</span> <span class="toc-text">4、单选框控件的消息和参考上面控件的消息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、列表框控件和组合框控件"><span class="toc-number">5.</span> <span class="toc-text">五、列表框控件和组合框控件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、列表框显示数据的列表"><span class="toc-number">5.1.</span> <span class="toc-text">1、列表框显示数据的列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、常用消息"><span class="toc-number">5.2.</span> <span class="toc-text">2、常用消息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、微调控件、滑块控件和进度条控件"><span class="toc-number">6.</span> <span class="toc-text">六、微调控件、滑块控件和进度条控件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、微调控件提供箭头，单击箭头可以进行调整，要使得编辑控件和微调控件一致需要执行下面的操作："><span class="toc-number">6.1.</span> <span class="toc-text">1、微调控件提供箭头，单击箭头可以进行调整，要使得编辑控件和微调控件一致需要执行下面的操作：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、划款控件位置等于范围加一，进度条控件方法参照其他控件，但是选择是我们需要选择进度条控件；主要方法如下："><span class="toc-number">6.2.</span> <span class="toc-text">2、划款控件位置等于范围加一，进度条控件方法参照其他控件，但是选择是我们需要选择进度条控件；主要方法如下：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、列表视图控件和树形视图控件"><span class="toc-number">7.</span> <span class="toc-text">七、列表视图控件和树形视图控件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、列表视图支持Icon、SmallIcon、List、Report等视图"><span class="toc-number">7.1.</span> <span class="toc-text">1、列表视图支持Icon、SmallIcon、List、Report等视图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、树形视图控件的创建，参考上述控件的创建"><span class="toc-number">7.2.</span> <span class="toc-text">2、树形视图控件的创建，参考上述控件的创建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、CTreeCtrl类实现树形视图控件的功能，WM-NOTIFY消息。"><span class="toc-number">7.3.</span> <span class="toc-text">3、CTreeCtrl类实现树形视图控件的功能，WM_NOTIFY消息。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、ActiveX控件，作用提供持久、连接点和主机标准接口的COM组件，可以在控件包含器中处理控件的协议，交换消息和处理事件。"><span class="toc-number">8.</span> <span class="toc-text">八、ActiveX控件，作用提供持久、连接点和主机标准接口的COM组件，可以在控件包含器中处理控件的协议，交换消息和处理事件。</span></a></li></ol>
+</div>
+<p>this is my first log of windows-op.it can be exist a lot of error and hope viewer can find it!</p>
+<h2 id="一、对话框编辑器创建控件"><a href="#一、对话框编辑器创建控件" class="headerlink" title="一、对话框编辑器创建控件"></a>一、对话框编辑器创建控件</h2><h3 id="1、使用new在堆上创建，系统结束时我们需要使用delete去销毁控件"><a href="#1、使用new在堆上创建，系统结束时我们需要使用delete去销毁控件" class="headerlink" title="1、使用new在堆上创建，系统结束时我们需要使用delete去销毁控件"></a>1、使用new在堆上创建，系统结束时我们需要使用delete去销毁控件</h3><h3 id="2、对话框编辑器控件，程序结束，自动销毁"><a href="#2、对话框编辑器控件，程序结束，自动销毁" class="headerlink" title="2、对话框编辑器控件，程序结束，自动销毁"></a>2、对话框编辑器控件，程序结束，自动销毁</h3><h2 id="二、控件类的基类"><a href="#二、控件类的基类" class="headerlink" title="二、控件类的基类"></a>二、控件类的基类</h2><p>CWnd类和消息映射隐藏在Wndproc()函数，含有windows消息时，会自动到<br>onmessage函数中，然后通过Onmessage函数的重写来实现对特殊消息的处理<br>使用CWnd类时，可以通过增加成员函数来实现对相关数据的存储，另外还可以实现啊成员函数和消息的映射</p>
+<h3 id="创建CWnd子控件"><a href="#创建CWnd子控件" class="headerlink" title="创建CWnd子控件"></a>创建CWnd子控件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1创建CWnd子控件分为两步：</span><br><span class="line">2调用构造函数创建CWnd对象</span><br></pre></td></tr></table></figure>
+<h2 id="三、控件的消息和处理"><a href="#三、控件的消息和处理" class="headerlink" title="三、控件的消息和处理"></a>三、控件的消息和处理</h2><p>发生消息处理事件的同时，父对话框会产生相应的改变，因此我们在做相应的添加<br>相应的消息的时候，都要对父类对话框做相应的处理，通常格式如下：<br>ON_Notification(id,memberfunction)    //消息映射<br>按钮控件<br>按钮控件有两个状态：按下和弹起<br>按钮控件类Cbutton(Cbitmapbutton处理图像按钮)<br>按钮事件的属性和消息<br>ON_BN_CLICKED,ON_BN_DOUBLECLICKED,用户双击按钮控件，发送给父窗体相应<br>事件<br>GetState(),SetState(),GetCheck(),SetCheck(),获取相应的窗口</p>
+<h2 id="四、静态控件和编辑控件"><a href="#四、静态控件和编辑控件" class="headerlink" title="四、静态控件和编辑控件"></a>四、静态控件和编辑控件</h2><h3 id="1、静态控件类static"><a href="#1、静态控件类static" class="headerlink" title="1、静态控件类static"></a>1、静态控件类static</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通常不接受输入和输出，使用SS_NOTIFY除外，显示鼠标，字符串，位图等</span><br></pre></td></tr></table></figure>
+<h3 id="2、Cedit编辑类控件"><a href="#2、Cedit编辑类控件" class="headerlink" title="2、Cedit编辑类控件"></a>2、Cedit编辑类控件</h3><p>使用GetLine()、SetSel()、GetSel（）、ReplaceSel()成员函数来获取和设置控件部分的文本<br>常用函数<br>ON_EN_CHANGE、ON_EN_ERRSPACE、ON_EN_HSCROLL、ON_EN_KILLFOCUS、ON_EN_MAXTEXT、ON_EN_SETFOCUS、ON_EN_UPDATE、ON_EN_VSCROLL消息<br>单选框和复选框控件</p>
+<h3 id="3、单选框控件"><a href="#3、单选框控件" class="headerlink" title="3、单选框控件"></a>3、单选框控件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">（1）、将各个单选框按钮的TAB键顺序按照分组设置，同一组的单选框控件的tab键组合在一起。</span><br><span class="line">（2）、选择每个分组的第一个单选按钮的group属性和Tab,stop以及Auto属性。</span><br><span class="line">（3）、其余的单选框选择Tab,stop和Auto属性即可</span><br></pre></td></tr></table></figure>
+<h3 id="4、单选框控件的消息和参考上面控件的消息"><a href="#4、单选框控件的消息和参考上面控件的消息" class="headerlink" title="4、单选框控件的消息和参考上面控件的消息"></a>4、单选框控件的消息和参考上面控件的消息</h3><p>复选框控件的创建，在创建时和一般相同但是我们需要选择复选框，事件参考上述按钮事件的使用</p>
+<h2 id="五、列表框控件和组合框控件"><a href="#五、列表框控件和组合框控件" class="headerlink" title="五、列表框控件和组合框控件"></a>五、列表框控件和组合框控件</h2><h3 id="1、列表框显示数据的列表"><a href="#1、列表框显示数据的列表" class="headerlink" title="1、列表框显示数据的列表"></a>1、列表框显示数据的列表</h3><p>CListBox<br>使用向导添加控件对象变量后，向导会在对话框类的DoDataExchange()函数中使用DDX_Control()函数与成员变量连接起来。</p>
+<h3 id="2、常用消息"><a href="#2、常用消息" class="headerlink" title="2、常用消息"></a>2、常用消息</h3><p>ON_LBN_DBLCLK、ON_LBN_ERRSPACE、ON_LBN_SELCANCEL、ON_LBN_KILLFOCUS、ON_LBN_CHANGE、ON_LBN_SETFOCUS、ON_LBN_CHARTOITEM、ON_LBN_VKEYTOLIEM消息<br>组合控件不仅可以处理CWnd的消息，另外还可以处理这些消息<br>ON_CBN_DBLCLK、ON_CBN_CLOSEUP、ON_CBN_DROPDOWN、ON_CBN_KILLFOCUS、ON_CBN_EDITCHANGE、ON_CBN_EDITUPDATE、ON_CBN_SELCHANGE、ON_CBN_SELENDCANCEL、ON_CBN_SELENDOK消息</p>
+<h2 id="六、微调控件、滑块控件和进度条控件"><a href="#六、微调控件、滑块控件和进度条控件" class="headerlink" title="六、微调控件、滑块控件和进度条控件"></a>六、微调控件、滑块控件和进度条控件</h2><h3 id="1、微调控件提供箭头，单击箭头可以进行调整，要使得编辑控件和微调控件一致需要执行下面的操作："><a href="#1、微调控件提供箭头，单击箭头可以进行调整，要使得编辑控件和微调控件一致需要执行下面的操作：" class="headerlink" title="1、微调控件提供箭头，单击箭头可以进行调整，要使得编辑控件和微调控件一致需要执行下面的操作："></a>1、微调控件提供箭头，单击箭头可以进行调整，要使得编辑控件和微调控件一致需要执行下面的操作：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">（1）、将编辑控件的Tab顺序值和微调控件的值相邻，并且编辑框控件的Tab键顺序值大</span><br><span class="line">（2）、取消微调控件的Tab属性</span><br><span class="line">（3）、设置微调控件的属性</span><br></pre></td></tr></table></figure>
+<h3 id="2、划款控件位置等于范围加一，进度条控件方法参照其他控件，但是选择是我们需要选择进度条控件；主要方法如下："><a href="#2、划款控件位置等于范围加一，进度条控件方法参照其他控件，但是选择是我们需要选择进度条控件；主要方法如下：" class="headerlink" title="2、划款控件位置等于范围加一，进度条控件方法参照其他控件，但是选择是我们需要选择进度条控件；主要方法如下："></a>2、划款控件位置等于范围加一，进度条控件方法参照其他控件，但是选择是我们需要选择进度条控件；主要方法如下：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SetRange进度条控件的范围值</span><br><span class="line">SetStep进度条控件的增量间隔值</span><br><span class="line">SetPos进度条控件的当前位置值</span><br><span class="line">SetPos设置当前位置值</span><br><span class="line">GetPos获取进度条的当前位置值</span><br></pre></td></tr></table></figure>
+<h2 id="七、列表视图控件和树形视图控件"><a href="#七、列表视图控件和树形视图控件" class="headerlink" title="七、列表视图控件和树形视图控件"></a>七、列表视图控件和树形视图控件</h2><h3 id="1、列表视图支持Icon、SmallIcon、List、Report等视图"><a href="#1、列表视图支持Icon、SmallIcon、List、Report等视图" class="headerlink" title="1、列表视图支持Icon、SmallIcon、List、Report等视图"></a>1、列表视图支持Icon、SmallIcon、List、Report等视图</h3><p>列表视图控件类CLsitCtrl<br>方法：CListCtrl::GetItem方法、CListCtrl::InsertItem方法、CListCtrl::FindItem方法。<br>列表视图控件的通知消息<br>要对项进行此列内容的排序，应该在处理函数中进行处理、在视图类或对话框类处理WM_NOTIFY消息对应的处理含糊ONChildNotify,加入switch语句来处理不同消息。</p>
+<h3 id="2、树形视图控件的创建，参考上述控件的创建"><a href="#2、树形视图控件的创建，参考上述控件的创建" class="headerlink" title="2、树形视图控件的创建，参考上述控件的创建"></a>2、树形视图控件的创建，参考上述控件的创建</h3><h3 id="3、CTreeCtrl类实现树形视图控件的功能，WM-NOTIFY消息。"><a href="#3、CTreeCtrl类实现树形视图控件的功能，WM-NOTIFY消息。" class="headerlink" title="3、CTreeCtrl类实现树形视图控件的功能，WM_NOTIFY消息。"></a>3、CTreeCtrl类实现树形视图控件的功能，WM_NOTIFY消息。</h3><h2 id="八、ActiveX控件，作用提供持久、连接点和主机标准接口的COM组件，可以在控件包含器中处理控件的协议，交换消息和处理事件。"><a href="#八、ActiveX控件，作用提供持久、连接点和主机标准接口的COM组件，可以在控件包含器中处理控件的协议，交换消息和处理事件。" class="headerlink" title="八、ActiveX控件，作用提供持久、连接点和主机标准接口的COM组件，可以在控件包含器中处理控件的协议，交换消息和处理事件。"></a>八、ActiveX控件，作用提供持久、连接点和主机标准接口的COM组件，可以在控件包含器中处理控件的协议，交换消息和处理事件。</h2><p>使用<br>在对话框资源编辑器，单击控件|属性菜单项<br>选择ALL选项卡，或者选择指定选项卡，在属性中输入初始值<br>属性，方法，类型库<br>包装类的使用<br>控件包装在COleDispatchDriver类<br>使用GetDlgItem函数需要包装类，返回值必须转换为控件类型。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CDBLIsT* pDBList=0</span><br><span class="line">pDBList=static_cast&lt;CDBList*&gt;(GetDlgItem(IDC_DBLISt));</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1、控件本身信息</span><br><span class="line">2、OLE/COM帮助信息</span><br><span class="line">3、控件和组件库插入控件</span><br><span class="line">4、对话框编辑框插入控件</span><br></pre></td></tr></table></figure>
+<p>MFC需要在InitInstance()添加以下代码AfxEnableControlContainer()</p>
+
+  	
+  
+</div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/14/windows控件/" data-id="cjqvubip300002wve2vif8m26" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="../../../../2018/05/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">Hello My Friend</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">kailicard</h1>
+    <h2 class="blog-subtitle"></h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="https://kailicard.github.io/kaikai.githup.io/2.jpg">
+    <h2 class="author">kaili</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>2</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>1</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>2</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="https://github.com/kailicard" target="_blank" title="Github">
+          Github
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="https://kamisec.github.io/" target="_blank" title="kami的博客">
+          kami的博客
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+  <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5espb0ft5jr&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2018 - 2019 kaili<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
+	  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	  <p class="copyright">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次, 访客数 <span id="busuanzi_value_site_uv"></span> 人次, 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次</p>
+      
+    </div>
+	
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  <link rel="stylesheet" href="../../../../plugin/fancybox/jquery.fancybox.css">
+  <script src="../../../../plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+  <link rel="stylesheet" href="../../../../plugin/galmenu/GalMenu.css">
+  <script src="../../../../plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="../../../../index.html" title="" class="menuItem">首页</a>
+          
+            <a href="../../../../tags" title="" class="menuItem">标签</a>
+          
+            <a href="../../../../categories" title="" class="menuItem">分类</a>
+          
+            <a href="../../../../archives" title="" class="menuItem">归档</a>
+          
+            <a href="https://github.com/kailicard" title="" class="menuItem">githup</a>
+          
+            <a href="https://www.52pojie.cn/" title="" class="menuItem">吾爱连接</a>
+          
+        </div>
+        
+          <audio id="audio" src="plugin/galmenu/wulusai.mp3"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+<script src="../../../../js/script.js"></script>
+
+
+
+
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("", "");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.article-title').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/01/assets/haru01.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
