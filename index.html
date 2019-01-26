@@ -38,8 +38,8 @@
     <h2 class="author">kaili</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>5</strong><br>分类</div></a>
+      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>4</strong><br>分类</div></a>
       <a href="/tags"><div><strong>5</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
@@ -65,6 +65,75 @@
 </div>
 
         <section id="main">
+  
+    <article id="post-邻接表" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="2019/01/26/邻接表/" class="article-date">
+  <time class="post-time" datetime="2019-01-26T11:37:51.000Z" itemprop="datePublished">
+    <span class="post-month">1月</span><br/>
+    <span class="post-day">26</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="2019/01/26/邻接表/">邻接表</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="categories/算法/">算法</a>
+  </div>
+
+          
+              
+  &nbsp; | &nbsp;
+  <div class="view-box">
+    <span id="2019/01/26/邻接表/" class="leancloud_visitors" data-flag-title="邻接表">
+      &nbsp;阅读次数<span class="leancloud-visitors-count"></span>
+    </span>
+  </div>
+
+
+          
+        </div>
+      </header>
+    
+<div class="article-entry" itemprop="articleBody">
+  
+  	
+  	
+  	  <h2 id="用邻接表存储有向图，并输出各顶点的出度和入度"><a href="#用邻接表存储有向图，并输出各顶点的出度和入度" class="headerlink" title="用邻接表存储有向图，并输出各顶点的出度和入度"></a>用邻接表存储有向图，并输出各顶点的出度和入度</h2><h3 id="题目来源图论算法"><a href="#题目来源图论算法" class="headerlink" title="题目来源图论算法"></a>题目来源图论算法</h3><p>例1.3<br>首先我们需要定义一些结构体，其用法在注释中使用<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># define maxn 100</span></span><br><span class="line"></span><br><span class="line">struct ArcNode&#123;</span><br><span class="line">    </span><br><span class="line">	int adjvex;           //有向边的另一个邻接点的序号</span><br><span class="line">	ArcNode *nextarc;    //指向下一个边节点的指针</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">struct VNode</span><br><span class="line">&#123;</span><br><span class="line">	int data;</span><br><span class="line">	ArcNode *head1;    //出边表的表头指针</span><br><span class="line">    ArcNode *head2;    // 入边表的表头指针</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">struct lgraph</span><br><span class="line">&#123;</span><br><span class="line">    VNode vertex[maxn];</span><br><span class="line">	int vexnum, arcnum;</span><br><span class="line">&#125;;</span><br><span class="line">lgraph lg;</span><br></pre></td></tr></table></figure></p>
+  	  
+        <p class="article-more-link">
+          <a href="/2019/01/26/邻接表/#more">Read More</a>
+        </p>
+      
+  	
+  
+</div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/26/邻接表/" data-id="cjrdeiqu10000pkvedbu11hq8" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
   
     <article id="post-青蛙的邻居" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -121,7 +190,7 @@
   
 </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/15/青蛙的邻居/" data-id="cjqx3voqg0001c8ve5g5e678t" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2019/01/15/青蛙的邻居/" data-id="cjrdeiqy5000jpkvey6x5xfdv" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/POJ-Monthly/">POJ Monthly</a></li></ul>
@@ -190,7 +259,7 @@
   
 </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/14/mfc菜单开发理论/" data-id="cjqx3voqv0005c8vebmtl1nuq" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2019/01/14/mfc菜单开发理论/" data-id="cjrdeiqu70002pkve2sdq6cjz" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/windows编程学习/">windows编程学习</a></li></ul>
@@ -259,7 +328,7 @@
   
 </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/14/邻接矩阵/" data-id="cjqx3vor00006c8vejydlcfhd" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2019/01/14/邻接矩阵/" data-id="cjrdeiqxx000gpkvep6p4buj6" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/算法/">算法</a></li></ul>
@@ -328,7 +397,7 @@
   
 </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/14/windows控件/" data-id="cjqx3voq00000c8vegw7zdge3" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2019/01/14/windows控件/" data-id="cjrdeiqxq000epkve29z3redq" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/windows编程学习/">windows编程学习</a></li></ul>
@@ -397,7 +466,7 @@
   
 </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/05/15/hello-world/" data-id="cjqx3voqr0004c8vebovix80j" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/05/15/hello-world/" data-id="cjrdeiqul0009pkvetwng05d5" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/博客报到/">博客报到</a></li></ul>
@@ -451,8 +520,8 @@
     <h2 class="author">kaili</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>5</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>5</strong><br>分类</div></a>
+      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>4</strong><br>分类</div></a>
       <a href="/tags"><div><strong>5</strong><br>标签</div></a>
     </div>
 
