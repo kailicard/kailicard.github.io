@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-26T11:47:55.607Z</updated>
+  <updated>2019-04-21T15:05:37.148Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VM逆向简单思考</title>
+    <link href="http://yoursite.com/2019/04/21/VM%E9%80%86%E5%90%91%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83/"/>
+    <id>http://yoursite.com/2019/04/21/VM逆向简单思考/</id>
+    <published>2019-04-21T15:05:37.000Z</published>
+    <updated>2019-04-21T15:05:37.148Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>邻接表</title>
