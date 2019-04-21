@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-21T15:05:37.148Z</updated>
+  <updated>2019-04-21T15:32:23.777Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,12 +20,22 @@
     <title>VM逆向简单思考</title>
     <link href="http://yoursite.com/2019/04/21/VM%E9%80%86%E5%90%91%E7%AE%80%E5%8D%95%E6%80%9D%E8%80%83/"/>
     <id>http://yoursite.com/2019/04/21/VM逆向简单思考/</id>
-    <published>2019-04-21T15:05:37.000Z</published>
-    <updated>2019-04-21T15:05:37.148Z</updated>
+    <published>2019-04-21T15:05:37.147Z</published>
+    <updated>2019-04-21T15:32:23.777Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="vm简介"><a href="#vm简介" class="headerlink" title="vm简介"></a>vm简介</h2><p>我这个菜鸡比较懒得总结了，这里直接附上知乎大佬们的总结</p><h3 id="关于vm逆向的一些简单思考："><a href="#关于vm逆向的一些简单思考：" class="headerlink" title="关于vm逆向的一些简单思考："></a>关于vm逆向的一些简单思考：</h3><pre><code>在对一些运用vm逆向的软件进行逆向时，主要考察还是个人的汇编能力</code></pre><p>因此个人怎么利用题目中的已知条件进行vm指令的还原至关重要。</p><h3 id="关于vm练习的链接"><a href="#关于vm练习的链接" class="headerlink" title="关于vm练习的链接"></a>关于vm练习的链接</h3><p>1、西普实验吧的re:<a href="http://www.shiyanbar.com/ctf/2032" target="_blank" rel="noopener">http://www.shiyanbar.com/ctf/2032</a><br>2、国外某creakme及简单分析:<a href="https://secrary.com/CrackMe/VM_1_MalwareTech/" target="_blank" rel="noopener">https://secrary.com/CrackMe/VM_1_MalwareTech/</a></p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h2 id=&quot;vm简介&quot;&gt;&lt;a href=&quot;#vm简介&quot; class=&quot;headerlink&quot; title=&quot;vm简介&quot;&gt;&lt;/a&gt;vm简介&lt;/h2&gt;&lt;p&gt;我这个菜鸡比较懒得总结了，这里直接附上知乎大佬们的总结&lt;/p&gt;
+&lt;h3 id=&quot;关于vm逆向的一些简单思考：&quot;&gt;&lt;a hre
+      
+    
     </summary>
+    
+      <category term="re随笔" scheme="http://yoursite.com/categories/re%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
@@ -87,15 +97,15 @@
     <link href="http://yoursite.com/2019/01/14/mfc%E8%8F%9C%E5%8D%95%E5%BC%80%E5%8F%91%E7%90%86%E8%AE%BA/"/>
     <id>http://yoursite.com/2019/01/14/mfc菜单开发理论/</id>
     <published>2019-01-14T07:02:20.000Z</published>
-    <updated>2019-01-14T07:09:00.050Z</updated>
+    <updated>2019-04-21T15:15:56.970Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="一、菜单的"><a href="#一、菜单的" class="headerlink" title="一、菜单的"></a>一、菜单的</h2><h3 id="1、在windows中，菜单资源的识别通过HMENU句柄识别，但是这个开发过程比较繁琐"><a href="#1、在windows中，菜单资源的识别通过HMENU句柄识别，但是这个开发过程比较繁琐" class="headerlink" title="1、在windows中，菜单资源的识别通过HMENU句柄识别，但是这个开发过程比较繁琐"></a>1、在windows中，菜单资源的识别通过HMENU句柄识别，但是这个开发过程比较繁琐</h3><h3 id="2、菜单的开发"><a href="#2、菜单的开发" class="headerlink" title="2、菜单的开发"></a>2、菜单的开发</h3><p>我们vc6.0开发可以借助可视化的工具，菜单对应的处理消息我们可以通过添加相应的时间来操作（菜单消息分类：菜单命令消息和菜单更新消息）。</p><h3 id="3、菜单快捷键"><a href="#3、菜单快捷键" class="headerlink" title="3、菜单快捷键"></a>3、菜单快捷键</h3><p>vc6.0菜单编辑器可以实现</p><h3 id="4、弹出式菜单创建和应用"><a href="#4、弹出式菜单创建和应用" class="headerlink" title="4、弹出式菜单创建和应用"></a>4、弹出式菜单创建和应用</h3><p>创建带有空标题的菜单<br>在上下文环境对应环境添加代码<br>对应类中添加代码</p><h3 id="5菜单类Cmenu"><a href="#5菜单类Cmenu" class="headerlink" title="5菜单类Cmenu"></a>5菜单类Cmenu</h3><p>Cmenu 封装了HMenu句柄，含有创建，更新，销毁菜单的函数</p><h2 id="二、工具栏"><a href="#二、工具栏" class="headerlink" title="二、工具栏"></a>二、工具栏</h2><h3 id="1、工具栏Id和菜单连接实现工具栏和菜单连接"><a href="#1、工具栏Id和菜单连接实现工具栏和菜单连接" class="headerlink" title="1、工具栏Id和菜单连接实现工具栏和菜单连接"></a>1、工具栏Id和菜单连接实现工具栏和菜单连接</h3><h3 id="2、停靠和浮动工具栏"><a href="#2、停靠和浮动工具栏" class="headerlink" title="2、停靠和浮动工具栏"></a>2、停靠和浮动工具栏</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CFrameWnd::EnableDocking()设置可停靠对象</span><br><span class="line">CControlBar::EnableDocking()设置可以停靠</span><br><span class="line">CFrameWnd::DockContorlBar()使工具栏停靠到框架对话框</span><br><span class="line">浮动工具栏的样式可以调整</span><br></pre></td></tr></table></figure><h3 id="3、CToolBar"><a href="#3、CToolBar" class="headerlink" title="3、CToolBar"></a>3、CToolBar</h3><p>封装了CFrame类的函数</p><h2 id="三、状态栏"><a href="#三、状态栏" class="headerlink" title="三、状态栏"></a>三、状态栏</h2><h3 id="状态栏的创建"><a href="#状态栏的创建" class="headerlink" title="状态栏的创建"></a>状态栏的创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在框架类定义CStatusBar对象</span><br><span class="line">Oncreate创建状态栏对象</span><br><span class="line">设置样式</span><br><span class="line">添加处理代码</span><br></pre></td></tr></table></figure><p>状态栏类CStatusBar包含CStatusBarCtrl,状态栏对话框构造时，在析构函数中自动析构</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="一、菜单的"><a href="#一、菜单的" class="headerlink" title="一、菜单的"></a>一、菜单的</h2><h3 id="1、在windows中，菜单资源的识别通过HMENU句柄识别"><a href="#1、在windows中，菜单资源的识别通过HMENU句柄识别" class="headerlink" title="1、在windows中，菜单资源的识别通过HMENU句柄识别"></a>1、在windows中，菜单资源的识别通过HMENU句柄识别</h3><h3 id="2、菜单的开发"><a href="#2、菜单的开发" class="headerlink" title="2、菜单的开发"></a>2、菜单的开发</h3><p>我们vc6.0开发可以借助可视化的工具，菜单对应的处理消息我们可以通过添加相应的时间来操作（菜单消息分类：菜单命令消息和菜单更新消息）。</p><h3 id="3、菜单快捷键"><a href="#3、菜单快捷键" class="headerlink" title="3、菜单快捷键"></a>3、菜单快捷键</h3><p>vc6.0菜单编辑器可以实现</p><h3 id="4、弹出式菜单创建和应用"><a href="#4、弹出式菜单创建和应用" class="headerlink" title="4、弹出式菜单创建和应用"></a>4、弹出式菜单创建和应用</h3><p>创建带有空标题的菜单<br>在上下文环境对应环境添加代码<br>对应类中添加代码</p><h3 id="5菜单类Cmenu"><a href="#5菜单类Cmenu" class="headerlink" title="5菜单类Cmenu"></a>5菜单类Cmenu</h3><p>Cmenu 封装了HMenu句柄，含有创建，更新，销毁菜单的函数</p><h2 id="二、工具栏"><a href="#二、工具栏" class="headerlink" title="二、工具栏"></a>二、工具栏</h2><h3 id="1、工具栏Id和菜单连接实现工具栏和菜单连接"><a href="#1、工具栏Id和菜单连接实现工具栏和菜单连接" class="headerlink" title="1、工具栏Id和菜单连接实现工具栏和菜单连接"></a>1、工具栏Id和菜单连接实现工具栏和菜单连接</h3><h3 id="2、停靠和浮动工具栏"><a href="#2、停靠和浮动工具栏" class="headerlink" title="2、停靠和浮动工具栏"></a>2、停靠和浮动工具栏</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CFrameWnd::EnableDocking()设置可停靠对象</span><br><span class="line">CControlBar::EnableDocking()设置可以停靠</span><br><span class="line">CFrameWnd::DockContorlBar()使工具栏停靠到框架对话框</span><br><span class="line">浮动工具栏的样式可以调整</span><br></pre></td></tr></table></figure><h3 id="3、CToolBar"><a href="#3、CToolBar" class="headerlink" title="3、CToolBar"></a>3、CToolBar</h3><p>封装了CFrame类的函数</p><h2 id="三、状态栏"><a href="#三、状态栏" class="headerlink" title="三、状态栏"></a>三、状态栏</h2><h3 id="状态栏的创建"><a href="#状态栏的创建" class="headerlink" title="状态栏的创建"></a>状态栏的创建</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在框架类定义CStatusBar对象</span><br><span class="line">Oncreate创建状态栏对象</span><br><span class="line">设置样式</span><br><span class="line">添加处理代码</span><br></pre></td></tr></table></figure><p>状态栏类CStatusBar包含CStatusBarCtrl,状态栏对话框构造时，在析构函数中自动析构</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;一、菜单的&quot;&gt;&lt;a href=&quot;#一、菜单的&quot; class=&quot;headerlink&quot; title=&quot;一、菜单的&quot;&gt;&lt;/a&gt;一、菜单的&lt;/h2&gt;&lt;h3 id=&quot;1、在windows中，菜单资源的识别通过HMENU句柄识别，但是这个开发过程比较繁琐&quot;&gt;&lt;a href=
+        &lt;h2 id=&quot;一、菜单的&quot;&gt;&lt;a href=&quot;#一、菜单的&quot; class=&quot;headerlink&quot; title=&quot;一、菜单的&quot;&gt;&lt;/a&gt;一、菜单的&lt;/h2&gt;&lt;h3 id=&quot;1、在windows中，菜单资源的识别通过HMENU句柄识别&quot;&gt;&lt;a href=&quot;#1、在windows中
       
     
     </summary>
