@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-21T15:32:23.777Z</updated>
+  <updated>2019-04-22T15:49:22.576Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>edb调试学习</title>
+    <link href="http://yoursite.com/2019/04/22/edb%E8%B0%83%E8%AF%95%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2019/04/22/edb调试学习/</id>
+    <published>2019-04-22T15:31:14.000Z</published>
+    <updated>2019-04-22T15:49:22.576Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-edb安装"><a href="#1-edb安装" class="headerlink" title="1.edb安装"></a>1.edb安装</h2><p>首先是kali-linux上，这个工具的环境已经被集成安装了，<br>部分没有安装的可以参考下面的链接：<a href="https://blog.csdn.net/nkguohao/article/details/8950744" target="_blank" rel="noopener">https://blog.csdn.net/nkguohao/article/details/8950744</a></p><h2 id="2-edb简单使用"><a href="#2-edb简单使用" class="headerlink" title="2.edb简单使用"></a>2.edb简单使用</h2><p>edb的使用可以分为带参数使用，首先我们调试程序时直接<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">edb --run ./program name  //直接调试</span><br><span class="line">edb --run ./program name -任意参数   //忽略掉参数直接调试</span><br></pre></td></tr></table></figure></p><h2 id="3-更多edb使用"><a href="#3-更多edb使用" class="headerlink" title="3.更多edb使用"></a>3.更多edb使用</h2><p>大家可以参照edb的github链接<a href="https://github.com/eteran/edb-debugger/wiki" target="_blank" rel="noopener">https://github.com/eteran/edb-debugger/wiki</a><br>另外还有一篇博客简单介绍edb调试的大家也可以参考下<a href="https://huirongis.me/2016/03/24/run-edb-with-args/" target="_blank" rel="noopener">https://huirongis.me/2016/03/24/run-edb-with-args/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;1-edb安装&quot;&gt;&lt;a href=&quot;#1-edb安装&quot; class=&quot;headerlink&quot; title=&quot;1.edb安装&quot;&gt;&lt;/a&gt;1.edb安装&lt;/h2&gt;&lt;p&gt;首先是kali-linux上，这个工具的环境已经被集成安装了，&lt;br&gt;部分没有安装的可以参考下面的链
+      
+    
+    </summary>
+    
+      <category term="re随笔" scheme="http://yoursite.com/categories/re%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>VM逆向简单思考</title>
